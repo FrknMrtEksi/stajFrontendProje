@@ -1,14 +1,28 @@
-<table class="table">
-  <thead>
-  <tr>
-    <td>Ürün Adı</td>
-    <td>Ürün Fiyatı</td>
-    <td>Kategorisi</td>
-  </tr>
-  </thead>
-  <tr *ngFor="let product of products">
-    <td>{{product.productName}}</td>
-    <td>{{product.unitPrice}}</td>
-    <td>{{product.categoryId}}</td>
-  </tr>
-</table>
+
+
+  <div class="container px-4 py-5" id="custom-cards">
+
+    <h2 class="pb-2 border-bottom">Products</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-3 py-5">
+      <form *ngFor="let product of products">
+  <div class="col divheight">
+    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+      <img src="/assets/img/{{product.imgId}}.jpg" class="img-fluid">
+      <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+        <h2 class="display-4 lh-1 fw-bold">{{product.productName}}</h2>
+        <p><font face="tahoma" size="3" color="maroon">
+          <b>Stok :{{product.unitsInStock}}</b></font></p>
+        <ul class="d-flex list-unstyled mt-auto">
+          <li class="me-auto">
+            <button type="submit" class="btn btn-success ms-2">Sepete Ekle</button>
+          </li>
+          <label  class=" col-form-label">{{product.unitPrice}}</label>
+        </ul>
+      </div>
+    </div>
+  </div>
+      </form>
+    </div>
+  </div>
+
