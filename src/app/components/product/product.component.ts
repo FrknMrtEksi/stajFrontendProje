@@ -31,10 +31,19 @@ export class ProductComponent implements OnInit {
     unitsInStock:20,
     imgId:2,
   };
+  product4={
+    productId:4,
+    productName:"Tabak",
+    categoryId:1,
+    unitPrice:12,
+    unitsInStock:50,
+    imgId:2,
+  };
   products:Product[]=[
     this.product1,
     this.product2,
     this.product3,
+    this.product4
   ];
   constructor() { }
 
