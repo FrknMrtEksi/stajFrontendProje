@@ -3,16 +3,16 @@ import {ShoppingAction, ShoppingActionTypes} from "../action/shopping-action";
 
 const initialState: Array<ShoppingItemModels>=[
   {
-    shopId:1,
+    shopId:'1',
     shopName:"Bardak",
-    shopUnitPrice:15,
-    shopImgId:1,
+    shopUnitPrice:'15',
+    shopImgId:'1',
   },
   {
-    shopId:1,
+    shopId:'1',
     shopName:"Bardak",
-    shopUnitPrice:15,
-    shopImgId:1,
+    shopUnitPrice:'15',
+    shopImgId:'1',
   },
 ];
 export function ShoppingReducer(state:Array<ShoppingItemModels>=initialState,action:ShoppingAction){
