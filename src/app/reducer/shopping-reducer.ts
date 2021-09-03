@@ -7,7 +7,13 @@ const initialState: Array<ShoppingItemModels>=[
     shopName:"Bardak",
     shopUnitPrice:15,
     shopImgId:1,
-  }
+  },
+  {
+    shopId:1,
+    shopName:"Bardak",
+    shopUnitPrice:15,
+    shopImgId:1,
+  },
 ];
 export function ShoppingReducer(state:Array<ShoppingItemModels>=initialState,action:ShoppingAction){
   switch (action.type){
