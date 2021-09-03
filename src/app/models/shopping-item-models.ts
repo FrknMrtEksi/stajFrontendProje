@@ -1,6 +1,6 @@
 export interface ShoppingItemModels{
-  shopId:number;
+  shopId:string;
   shopName:string;
-  shopUnitPrice:number;
-  shopImgId:number;
+  shopUnitPrice:string;
+  shopImgId:string;
 }
