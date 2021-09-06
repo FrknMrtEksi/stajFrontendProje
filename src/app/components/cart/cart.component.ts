@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ShoppingItemModels} from "../../models/shopping-item-models";
+import {CartService} from "../../service/cart.service";
+import {CartItem} from "../../models/cartItem";
 
 @Component({
   selector: 'app-cart',
@@ -7,10 +8,13 @@ import {ShoppingItemModels} from "../../models/shopping-item-models";
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  CartItems:ShoppingItemModels[]=[];
-  constructor() { }
+  cartItems:CartItem[]=[];
+  constructor(private cartService:CartService) { }
 
   ngOnInit(): void {
+    this.getCart();
   }
-
+ getCart(){
+    this.cartItems=this.cartService.cartList();
+ }
 }

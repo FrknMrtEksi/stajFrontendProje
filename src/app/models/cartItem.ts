@@ -1,3 +1,7 @@
-import {ShoppingItemModels} from "./shopping-item-models";
+import {Product} from "./product";
 
-export const cartItem:ShoppingItemModels[]=[];
+
+export interface CartItem{
+  product: Product;
+  quantity: number;
+}

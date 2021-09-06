@@ -17,10 +17,10 @@
         <p><font face="tahoma" size="3" color="maroon">
           <b>Stok :{{product.unitsInStock}}</b></font></p>
         <ul class="d-flex list-unstyled mt-auto">
-          <li class="me-auto">
-            <button type="button" (click)="addToCart(product)" class="btn btn-outline-light mt-auto">Sepete Ekle</button>
-          </li>
           <label  class=" col-form-label">Fiyat:{{product.unitPrice}}TL</label>
+          <li class="me-auto">
+            <button type="button" (click)="addToCart(product)" class="btn btn-outline-light ms-1">Sepete Ekle</button>
+          </li>
         </ul>
       </div>
     </div>
