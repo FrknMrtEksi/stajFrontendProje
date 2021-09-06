@@ -1,6 +1,7 @@
+import {Product} from "./product";
+
 export interface ShoppingItemModels{
-  shopId:string;
-  shopName:string;
-  shopUnitPrice:string;
-  shopImgId:string;
+  product:Product;
+  quantity:number;
+
 }

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-gradient">
   <div class="container-fluid">
     <a class="navbar-brand text-success logo h1 align-self-center" routerLink="home">Mutfağım Store</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -12,26 +12,13 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="shop">Mağaza</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="cart">Sepetim</a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">İletişim</a>
         </li>
-         <li>
-           <form class="d-flex ms-5">
-             <input class="form-control me-2" type="search" placeholder="Arama..." aria-label="Search">
-             <button class="btn btn-outline-success" type="submit">Ara</button>
-           </form>
-         </li>
+
       </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-dark" type="submit">
-          <i class="bi-cart-fill me-1"></i>
-          Sepet
-          <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-        </button>
-      </form>
+      <app-cart></app-cart>
     </div>
   </div>
 </nav>

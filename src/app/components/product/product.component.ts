@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {Product} from 'src/app/models/product'
+import {Product} from 'src/app/models/product';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-
+ addToCart(product:Product){
+   console.log(product);
+ }
   product1={
     productId:"1",
     productName:"Bardak",
