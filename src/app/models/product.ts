@@ -1,8 +1,8 @@
 export interface Product{
-  productId:string;
-  categoryId:string;
+  productId:number;
+  categoryId:number;
   productName:string;
-  unitsInStock:string;
-  unitPrice:string;
-  imgId:string;
+  unitsInStock:number;
+  unitPrice:number;
+  imgId:number;
 }

@@ -14,10 +14,12 @@ export class CartService {
     let item=CartItems.find(c=>c.product.productId===product.productId);
     if (item){
       item.quantity+=1;
+      item.product.unitsInStock -=1;
     }else{
       // @ts-ignore
       let degisken= new CartItem();
       degisken.product=product;
+      degisken.product.unitsInStock-=1;
       degisken.quantity=1;
       CartItems.push(degisken);
     }
