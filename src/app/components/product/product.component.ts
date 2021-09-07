@@ -27,7 +27,7 @@ export class ProductComponent implements OnInit {
     imgId:3,
   };
   product3={
-    productId:2,
+    productId:3,
     productName:"Tabak",
     categoryId:1,
     unitPrice:10,
@@ -44,9 +44,9 @@ export class ProductComponent implements OnInit {
   };
   products:Product[]=[
     this.product1,
-    this.product2,
+    this.product4,
     this.product3,
-    this.product4
+    this.product2
   ];
 
 
