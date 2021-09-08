@@ -1,5 +1,5 @@
 
-<form class="d-flex" *ngIf="cartItems">
+<form class="d-flex" >
 <div class="dropdown">
   <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi-cart-fill me-1"></i>
@@ -8,10 +8,13 @@
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li *ngFor="let items of cartItems"><a class="dropdown-item">
-      <span class="badge bg-dark text-white me-2 rounded-pill">{{items.quantity}}</span><img src="assets/img/{{items.product.imgId}}.1.jpg">{{items.product.productName}}_{{items.product.unitPrice}} TL</a>
+      <span class="badge bg-dark text-white me-2 rounded-pill">{{items.quantity}}</span>
+      <img src="assets/img/{{items.product.imgId}}.1.jpg">{{items.product.productName}}_{{items.product.unitPrice}} TL
+      <button type="button" (click)="removeFromCart(items.product)" class="btn-close" aria-label="Close"></button></a>
+
    </li>
     <li><hr class="dropdown-divider"></li>
-    <button type="button" class="btn btn-outline-primary mt-auto ms-4">Sepet Detay</button>
+    <button type="button" *ngIf="cartItems.length>0" class="btn btn-outline-primary me-auto" routerLink="cartDetail">Sepet Detay</button>
   </ul>
 </div>
 </form>

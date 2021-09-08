@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {FormsModule} from "@angular/forms";
 import { CartComponent } from './components/cart/cart.component';
+import { CartDetailComponent } from './components/cart-detail/cart-detail.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -23,6 +25,8 @@ import { CartComponent } from './components/cart/cart.component';
     HomeComponent,
     FooterComponent,
     CartComponent,
+    CartDetailComponent,
+    ContactComponent,
 
   ],
   imports: [

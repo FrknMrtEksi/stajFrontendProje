@@ -1,0 +1,26 @@
+<div class="container px-4 py-5" id="custom-cards">
+
+  <h2 class="pb-2 border-bottom">Sepet Detay</h2>
+
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-3 py-5">
+    <form *ngFor="let items of cartItems">
+      <div class="col divheight">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+          <img src="/assets/img/{{items.product.imgId}}.jpg" class="img-fluid">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="display-4 lh-1 fw-bold">{{items.product.productName}}</h2>
+            <p><font face="tahoma" size="2" color="maroon">
+              <b>Birim Fiyat :{{items.product.unitPrice}}</b></font></p>
+            <p><font face="tahoma" size="2" color="maroon">
+              <b>Adet :{{items.quantity}}</b></font></p>
+            <p><font face="tahoma" size="2" color="maroon">
+              <b>Toplam Fiyat:{{items.product.unitPrice*items.quantity}}</b></font></p>
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <button type="button" *ngIf="cartItems.length>0" class="btn btn-success ms-1">Ödeme Yap</button>
+</div>
